@@ -19,7 +19,7 @@ export default function FilterByAvailability() {
 
   useEffect(() => {
     setIsAvailable(isSearchParamsMatching(term, "true"));
-  }, [getSearchParamsValue]);
+  }, [isSearchParamsMatching]);
 
   const handleCheckboxChange = () => {
     const newValue = !isAvailable;

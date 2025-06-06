@@ -11,7 +11,7 @@ export default function ProductCard() {
         <Link href={`/product/${123}`} className="block size-full">
           {/* <Image
             src="/images/product-card.jpg"
-            alt="book's cover"
+            alt="book&apos;s cover"
             fill
             className="object-cover"
           /> */}
@@ -25,7 +25,7 @@ export default function ProductCard() {
 
       <div className="max-w-60 mx-auto">
         <Link href={`/product/${123}`} className="font-medium line-clamp-1">
-          This is the book's title
+          This is the book&apos;s title
         </Link>
         <div className="text-sm">Author name</div>
         <div className="flex items-center-safe gap-2 my-1">

@@ -18,7 +18,7 @@ export default function StarRating({
     size === "small" ? "size-4" : size === "medium" ? "size-6" : "size-8"
   } text-transparent`;
 
-  let stars = [];
+  const stars = [];
   for (let i = 1; i <= maxStars; i++) {
     if (i <= normalizeRating)
       stars.push(<StarIcon key={i} className={`${className} fill-star`} />);
