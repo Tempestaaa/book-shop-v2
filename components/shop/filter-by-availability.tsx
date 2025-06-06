@@ -9,12 +9,8 @@ import { useEffect, useState } from "react";
 export default function FilterByAvailability() {
   const term = "availability";
 
-  const {
-    isSearchParamsMatching,
-    changePageURL,
-    getSearchParamsValue,
-    deletePageURL,
-  } = useSearchParamsActions();
+  const { isSearchParamsMatching, changePageURL, deletePageURL } =
+    useSearchParamsActions();
   const [isAvailable, setIsAvailable] = useState(false);
 
   useEffect(() => {

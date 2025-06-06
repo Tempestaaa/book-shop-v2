@@ -1,6 +1,6 @@
 import ShopGrid from "@/components/shop/shop-grid";
 import FilterPills from "@/components/shop/filter-pills";
-import SortOptions from "@/components/shop/sort-options";
+// import SortOptions from "@/components/shop/sort-options";
 
 type Props = {
   searchParams: Promise<{
@@ -18,7 +18,7 @@ export default async function ShopPage({ searchParams }: Props) {
           <FilterPills searchParamsArray={searchParamsArray} />
         </div>
 
-        <SortOptions />
+        {/* <SortOptions /> */}
       </section>
 
       <section>
