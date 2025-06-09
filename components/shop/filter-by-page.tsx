@@ -7,7 +7,7 @@ import { pageRanges } from "@/data/common";
 import useSearchParamsActions from "@/hooks/useSearchParamsActions";
 
 export default function FilterByPage() {
-  const term = "page";
+  const term = "pages";
 
   const { isSearchParamsMatching, changePageURL } = useSearchParamsActions();
   const isChecked = (value: string) => isSearchParamsMatching(term, value);

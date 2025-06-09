@@ -1,6 +1,8 @@
 import ShopGrid from "@/components/shop/shop-grid";
 import FilterPills from "@/components/shop/filter-pills";
-// import SortOptions from "@/components/shop/sort-options";
+import SortOptions from "@/components/shop/sort-options";
+import FilterSidebar from "@/components/shop/filter-sidebar";
+import Pagination from "@/components/ui/pagination";
 
 type Props = {
   searchParams: Promise<{
@@ -12,18 +14,25 @@ export default async function ShopPage({ searchParams }: Props) {
   const searchParamsArray = Object.entries(await searchParams);
 
   return (
-    <div className="space-y-4">
-      <section className="flex-center gap-4">
-        <div className="flex-1 overflow-hidden">
-          <FilterPills searchParamsArray={searchParamsArray} />
-        </div>
-
-        {/* <SortOptions /> */}
+    <>
+      <section className="col-span-3">
+        <FilterSidebar />
       </section>
 
-      <section>
-        <ShopGrid />
+      <section className="col-span-9 space-y-4">
+        <section className="flex-center gap-4">
+          <div className="flex-1 overflow-hidden">
+            <FilterPills searchParamsArray={searchParamsArray} />
+          </div>
+
+          <SortOptions />
+        </section>
+
+        <section className="space-y-8">
+          <ShopGrid />
+          <Pagination totalLength={Array(10).length} />
+        </section>
       </section>
-    </div>
+    </>
   );
 }

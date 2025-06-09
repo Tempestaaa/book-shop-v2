@@ -20,12 +20,12 @@ export default function useSearchParamsActions() {
   };
 
   const changePageURL = (term: string, value: string) =>
-    router.push(createPageURL(term, value));
+    router.replace(createPageURL(term, value));
 
   const deletePageURL = (term: string) => {
     const params = new URLSearchParams(searchParams.toString());
     params.delete(term);
-    router.push(`${pathname}?${params.toString()}`);
+    router.replace(`${pathname}?${params.toString()}`);
   };
 
   const getInitialSearchParamsValue = (term: string, defaultValue: string) => {

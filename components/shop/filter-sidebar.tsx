@@ -10,7 +10,9 @@ export default function FilterSidebar() {
   return (
     <aside>
       <Suspense>
-        <FilterClearAllButton />
+        <section className="h-9 flex-center justify-end-safe">
+          <FilterClearAllButton />
+        </section>
         <section className="divide-y divide-accent/50 *:py-2">
           <FilterByGenre />
           <FilterByPrice />

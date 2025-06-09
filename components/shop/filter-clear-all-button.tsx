@@ -24,7 +24,7 @@ export default function FilterClearAllButton() {
     router.replace(pathname, { scroll: false });
 
   return (
-    <div className="flex justify-end-safe">
+    <>
       {showFilters.isShow && (
         <Button
           variant="ghost"
@@ -34,6 +34,6 @@ export default function FilterClearAllButton() {
           Clear all
         </Button>
       )}
-    </div>
+    </>
   );
 }

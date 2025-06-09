@@ -1,16 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { BellIcon, ShoppingCartIcon } from "lucide-react";
+import CartButton from "@/components/layout/cart-button";
+import NotificationButton from "@/components/layout/notification-button";
 
 export default function NavbarButtons() {
   return (
     <div className="flex-center gap-2">
-      <Button variant="ghost" size="icon">
-        <ShoppingCartIcon />
-      </Button>
-
-      <Button variant="ghost" size="icon">
-        <BellIcon />
-      </Button>
+      <CartButton />
+      <NotificationButton />
     </div>
   );
 }

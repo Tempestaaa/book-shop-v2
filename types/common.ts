@@ -27,3 +27,8 @@ export const filterByPage = z.object({
     .nonnegative("Pages cannot be negative")
     .max(Number.MAX_SAFE_INTEGER, "Pages cannot pass this limit"),
 });
+
+export const breadcrumb = z.object({
+  label: z.string(),
+  href: z.string().optional(),
+});

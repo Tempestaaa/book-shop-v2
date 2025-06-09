@@ -52,6 +52,6 @@ export const onlyFilterThese = [
   "genre",
   "price",
   "format",
-  "page",
+  "pages",
   "availability",
 ];
