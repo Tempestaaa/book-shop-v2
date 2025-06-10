@@ -6,6 +6,8 @@ import { Separator } from "@/components/ui/separator";
 export default function SettingsPage() {
   return (
     <div className="space-y-4">
+      <header className="text-4xl font-bold">Settings</header>
+
       <Label className="flex flex-col items-start gap-2">
         <div className="text-base">Two-factor authentication</div>
 
@@ -17,7 +19,7 @@ export default function SettingsPage() {
           just a password.
         </p>
 
-        <Button>Active</Button>
+        <Button>Activate</Button>
       </Label>
 
       <Separator />

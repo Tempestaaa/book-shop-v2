@@ -24,7 +24,7 @@ export default function FilterDeleteButton({
           {isUsingIcon ? (
             <button
               onClick={() => deletePageURL(term)}
-              className="hover:text-destructive duration-200"
+              className="hover:text-destructive duration-300"
             >
               <XCircleIcon className="size-3" />
             </button>

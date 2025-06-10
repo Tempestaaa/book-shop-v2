@@ -1,4 +1,4 @@
-import ShopGrid from "@/components/shop/shop-grid";
+import ProductGrid from "@/components/product/product-grid";
 import FilterPills from "@/components/shop/filter-pills";
 import SortOptions from "@/components/shop/sort-options";
 import FilterSidebar from "@/components/shop/filter-sidebar";
@@ -29,7 +29,7 @@ export default async function ShopPage({ searchParams }: Props) {
         </section>
 
         <section className="space-y-8">
-          <ShopGrid />
+          <ProductGrid />
           <Pagination totalLength={Array(10).length} />
         </section>
       </section>

@@ -46,7 +46,7 @@ export default function NavbarUser() {
               <DropdownMenuItem key={href} asChild>
                 <Link
                   href={href}
-                  className="flex-center gap-5 py-2 px-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 duration-200 rounded"
+                  className="flex-center gap-5 py-2 px-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 duration-300 rounded"
                 >
                   <Icon className="size-3.5" />
                   <div className="text-sm">{name}</div>

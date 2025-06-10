@@ -5,7 +5,7 @@ export default function NavbarSearch() {
     <form>
       <Input
         placeholder="Search"
-        className="w-52 focus:w-72 transition-[width] duration-200"
+        className="w-52 focus:w-72 transition-[width] duration-300"
       />
     </form>
   );

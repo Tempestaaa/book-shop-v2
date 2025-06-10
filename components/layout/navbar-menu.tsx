@@ -14,13 +14,13 @@ export default function NavbarMenu() {
       {navbarMenu.map(({ name, href, children }) => (
         <li
           key={href}
-          className="relative hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 duration-200 rounded-md"
+          className="relative hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 duration-300 rounded-md"
         >
           {isActive(href) ? (
-            <div className="size-full flex-1 px-4 py-1.5 flex-center gap-1 bg-accent rounded-md">
+            <button className="size-full flex-1 px-4 py-1.5 flex-center gap-1 bg-accent rounded-md">
               <div>{name}</div>
               {children && <ChevronDownIcon className="size-4" />}
-            </div>
+            </button>
           ) : (
             <Link
               href={href}
