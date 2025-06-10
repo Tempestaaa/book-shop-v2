@@ -2,6 +2,7 @@ import ProductGrid from "@/components/product/product-grid";
 import SortOptions from "@/components/shop/sort-options";
 import { Input } from "@/components/ui/input";
 import Pagination from "@/components/ui/pagination";
+import { Suspense } from "react";
 
 export default function WishListPage() {
   return (
@@ -14,12 +15,17 @@ export default function WishListPage() {
           className="w-54 focus:w-72 transition-[width] duration-300"
         />
 
-        <SortOptions />
+        <Suspense fallback="Loading...">
+          <SortOptions />
+        </Suspense>
       </section>
 
       <section className="space-y-8">
         <ProductGrid />
-        <Pagination totalLength={Array(10).length} />
+
+        <Suspense fallback="Loading...">
+          <Pagination totalLength={Array(10).length} />
+        </Suspense>
       </section>
     </div>
   );
