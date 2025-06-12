@@ -6,18 +6,20 @@ import { Suspense } from "react";
 
 export default function WishListPage() {
   return (
-    <div className="space-y-4">
-      <header className="text-4xl font-bold">Wishlist</header>
-
+    <div className="space-y-8">
       <section className="flex-center gap-4 justify-between">
-        <Input
-          placeholder="Search"
-          className="w-54 focus:w-72 transition-[width] duration-300"
-        />
+        <header className="text-heading">Wishlist</header>
 
-        <Suspense fallback="Loading...">
-          <SortOptions />
-        </Suspense>
+        <div className="flex-center gap-2">
+          <Input
+            placeholder="Search"
+            className="w-54 focus:w-72 transition-[width] duration-300"
+          />
+
+          <Suspense fallback="Loading...">
+            <SortOptions />
+          </Suspense>
+        </div>
       </section>
 
       <section className="space-y-8">

@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 export default function RelatedProducts() {
   return (
     <div className="space-y-4">
-      <div className="text-xl font-bold">Related Products</div>
+      <div className="text-heading">Related Products</div>
 
       <Swiper
         spaceBetween={16}

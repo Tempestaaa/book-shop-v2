@@ -27,8 +27,8 @@ export default function ProfileForm() {
   };
 
   return (
-    <div className="space-y-4">
-      <header className="text-4xl font-bold">My account</header>
+    <div className="space-y-8">
+      <header className="text-heading">My account</header>
 
       <form className="space-y-4">
         <section className="flex items-center-safe gap-4">

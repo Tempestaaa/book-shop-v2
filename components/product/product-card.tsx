@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ProductCard() {
   return (
     <div className="space-y-2 group">
-      <div className="max-w-60 h-80 mx-auto bg-muted rounded overflow-hidden relative">
+      <div className="max-w-60 h-80 mx-auto bg-muted rounded-md overflow-hidden relative">
         <Link href={`/product/${123}`} className="block size-full">
           {/* <Image
             src="/images/product-card.jpg"
@@ -27,7 +27,7 @@ export default function ProductCard() {
         <Link href={`/product/${123}`} className="font-medium line-clamp-1">
           This is the book&apos;s title
         </Link>
-        <div className="text-sm">Author name</div>
+        <div className="text-sm text-muted-foreground">Author name</div>
         <div className="flex items-center-safe gap-2 my-1">
           <StarRating rating={3.5} size="small" />
           <span className="text-xs text-muted-foreground">(956)</span>

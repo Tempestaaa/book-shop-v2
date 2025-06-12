@@ -1,6 +1,7 @@
 import FilterDeleteButton from "@/components/shop/filter-delete-button";
 import { Badge } from "@/components/ui/badge";
 import { onlyFilterThese } from "@/data/common";
+import { reverseFormatSearchParams } from "@/lib/utils";
 
 type Props = {
   searchParamsArray: [string, string | undefined][];
@@ -17,7 +18,9 @@ export default function FilterPills({ searchParamsArray }: Props) {
         <Badge key={key} className="text-xs font-normal flex-center gap-0.5">
           <span className="capitalize">{key}</span>
           <span className="mr-0.5">:</span>
-          <span className="capitalize">{value}</span>
+          <span className="capitalize">
+            {reverseFormatSearchParams(value as string)}
+          </span>
 
           <div className="ml-1.5">
             <FilterDeleteButton term={key} isUsingIcon />

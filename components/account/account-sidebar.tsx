@@ -9,19 +9,19 @@ export default function AccountSidebar() {
   const isActive = (href: string) => href === pathname;
 
   return (
-    <ul className="">
-      {navbarUserMenu.map(({ href, icon, name }) => {
+    <ul className="p-4 shadow-xs shadow-foreground rounded-md">
+      {navbarUserMenu.map(({ href, icon, label }) => {
         const Icon = icon;
         return (
           <li key={href}>
             <Link
-              href={href}
-              className={`flex-center gap-4 py-2 px-4 hover:bg-accent hover:text-accent-foreground duration-300 rounded-md ${
-                isActive(href) && "!bg-foreground !text-background"
+              href={href as string}
+              className={`flex-center gap-4 py-2 px-4 hover:bg-accent hover:text-accent-foreground duration-300 rounded-md border-l-3 border-transparent ${
+                isActive(href as string) && "!border-foreground rounded-l-none"
               }`}
             >
               <Icon className="size-4" />
-              <div className="">{name}</div>
+              <div className="">{label}</div>
             </Link>
           </li>
         );

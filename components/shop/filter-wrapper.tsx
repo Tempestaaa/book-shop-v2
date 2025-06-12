@@ -13,7 +13,7 @@ export default function FilterWrapper({
 }: Props) {
   return (
     <section className="space-y-2">
-      <header className="font-medium capitalize">{term}</header>
+      <header className="text-subheading capitalize">{term}</header>
       {children}
       {isShowButton && <FilterDeleteButton term={term} side="right" />}
     </section>

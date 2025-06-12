@@ -141,6 +141,12 @@
   .grid-center {
     @apply grid place-items-center-safe;
   }
+  .text-heading {
+    @apply font-semibold text-2xl;
+  }
+  .text-subheading {
+    @apply font-semibold text-xl;
+  }
 }
 
 /* Range slider */

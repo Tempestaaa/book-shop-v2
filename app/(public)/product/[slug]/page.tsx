@@ -7,8 +7,7 @@ import EvaluationStatistics from "@/components/product/evaluation-statistics";
 import RelatedProducts from "@/components/product/related-products";
 import { Separator } from "@/components/ui/separator";
 import { reverseFormatSearchParams } from "@/lib/utils";
-import { breadcrumb } from "@/types/common";
-import { z } from "zod/v4";
+import { Options } from "@/types/common";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -16,7 +15,7 @@ type Props = {
 
 export default async function BookDetailsPage({ params }: Props) {
   const { slug } = await params;
-  const breadcrumbs: z.infer<typeof breadcrumb>[] = [
+  const breadcrumbs: Options[] = [
     { label: "Home", href: "/" },
     { label: "Shop", href: "/shop" },
     { label: "Fantasy", href: "/shop?genre=fantasy" },

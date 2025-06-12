@@ -8,12 +8,13 @@ import { Suspense } from "react";
 
 export default function FilterSidebar() {
   return (
-    <aside>
+    <aside className="space-y-4">
       <Suspense>
         <section className="h-9 flex-center justify-end-safe">
           <FilterClearAllButton />
         </section>
-        <section className="divide-y divide-accent/50 *:py-2">
+
+        <section className="divide-y divide-accent/50 *:py-4 shadow-xs shadow-foreground rounded-md px-4">
           <FilterByGenre />
           <FilterByPrice />
           <FilterByFormat />

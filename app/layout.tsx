@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import Navbar from "@/components/layout/navbar";
+import { Toaster } from "@/components/ui/sonner";
 
 const defaultFont = Montserrat({
   subsets: ["latin"],
@@ -37,6 +38,8 @@ export default function RootLayout({
         >
           <Navbar />
           <div className="container mx-auto py-20">{children}</div>
+
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

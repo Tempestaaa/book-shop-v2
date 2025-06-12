@@ -28,19 +28,22 @@ export default function NotificationButton() {
 
         <DropdownMenuSeparator />
 
-        <ScrollArea className="space-y-1 h-80 pr-4">
-          {[...Array(9)].map((_, id) => (
-            <NotificationCard key={id} />
-          ))}
+        <label className="space-y-4">
+          <input type="radio" name="extend" hidden className="peer" />
+          <ScrollArea className="space-y-1 h-70 peer-checked:h-120 pr-4 transition-[height] duration-300">
+            {[...Array(9)].map((_, id) => (
+              <NotificationCard key={id} />
+            ))}
 
-          <ScrollBar />
-        </ScrollArea>
+            <ScrollBar />
+          </ScrollArea>
 
-        <DropdownMenuSeparator />
+          <DropdownMenuSeparator className="peer-checked:hidden" />
 
-        <Button variant="ghost" className="w-full">
-          More
-        </Button>
+          <div className="grid-center hover:bg-accent hover:text-accent-foreground duration-300 cursor-pointer h-9 py-2 px-4 rounded-md text-sm peer-checked:hidden">
+            More
+          </div>
+        </label>
       </DropdownMenuContent>
     </DropdownMenu>
   );

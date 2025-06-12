@@ -1,46 +1,55 @@
-import { filterByPage, Menu, MenuWithIcon } from "@/types/common";
-import { HeartIcon, LogsIcon, SettingsIcon, User2Icon } from "lucide-react";
-import { z } from "zod/v4";
+import { FilterByPage, Menu } from "@/types/common";
+import {
+  HeartIcon,
+  LogsIcon,
+  LucideIcon,
+  SettingsIcon,
+  User2Icon,
+} from "lucide-react";
 
-export const navbarMenu: z.infer<typeof Menu>[] = [
+export const navbarMenu: Menu[] = [
   {
-    name: "Shop",
+    label: "Shop",
     href: "/shop",
   },
   {
-    name: "Genres",
+    label: "Genres",
     href: "/genres",
   },
   {
-    name: "About",
+    label: "About",
     href: "/about",
   },
 ];
 
-export const navbarUserMenu: MenuWithIcon[] = [
+export const navbarUserMenu: {
+  label: string;
+  href: string;
+  icon: LucideIcon;
+}[] = [
   {
-    name: "My account",
-    href: "/account/profile",
+    label: "My account",
     icon: User2Icon,
+    href: "/account/profile",
   },
   {
-    name: "My orders",
-    href: "/account/orders",
+    label: "My orders",
     icon: LogsIcon,
+    href: "/account/orders",
   },
   {
-    name: "Wishlist",
-    href: "/account/wishlist",
+    label: "Wishlist",
     icon: HeartIcon,
+    href: "/account/wishlist",
   },
   {
-    name: "Settings",
-    href: "/account/settings",
+    label: "Settings",
     icon: SettingsIcon,
+    href: "/account/settings",
   },
 ];
 
-export const pageRanges: z.infer<typeof filterByPage>[] = [
+export const pageRanges: FilterByPage[] = [
   { label: "Under 100 pages", min: 0, max: 99 },
   { label: "100 - 300 pages", min: 100, max: 300 },
   { label: "301 - 500 pages", min: 301, max: 500 },

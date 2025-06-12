@@ -6,12 +6,11 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { breadcrumb } from "@/types/common";
-import React from "react";
-import { z } from "zod/v4";
+import { Options } from "@/types/common";
+import { Fragment } from "react";
 
 type Props = {
-  breadcrumbs: z.infer<typeof breadcrumb>[];
+  breadcrumbs: Options[];
 };
 
 export default function MyBreadcrumb({ breadcrumbs }: Props) {
@@ -19,8 +18,8 @@ export default function MyBreadcrumb({ breadcrumbs }: Props) {
     <Breadcrumb>
       <BreadcrumbList>
         {breadcrumbs.map((crumb, index) => (
-          <React.Fragment key={index}>
-            <BreadcrumbItem>
+          <Fragment key={index}>
+            <BreadcrumbItem className="text-xs">
               {crumb.href && index < breadcrumbs.length - 1 ? (
                 <BreadcrumbLink href={crumb.href}>{crumb.label}</BreadcrumbLink>
               ) : (
@@ -28,7 +27,7 @@ export default function MyBreadcrumb({ breadcrumbs }: Props) {
               )}
             </BreadcrumbItem>
             {index < breadcrumbs.length - 1 && <BreadcrumbSeparator />}
-          </React.Fragment>
+          </Fragment>
         ))}
       </BreadcrumbList>
     </Breadcrumb>
