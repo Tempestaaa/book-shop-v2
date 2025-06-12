@@ -5,23 +5,10 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
 } from "@/components/ui/dropdown-menu";
+import { ratingSort } from "@/data/common";
 import useSearchParamsActions from "@/hooks/useSearchParamsActions";
-import { OptionsWithIcon } from "@/types/common";
-import { ChevronsDownIcon, ChevronsUpIcon, StarIcon } from "lucide-react";
+import { StarIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
-
-const ratingSort: OptionsWithIcon[] = [
-  {
-    name: "High to Low",
-    href: "asc",
-    icon: ChevronsDownIcon,
-  },
-  {
-    name: "Low to High",
-    href: "desc",
-    icon: ChevronsUpIcon,
-  },
-];
 
 export default function RatingSort() {
   const term = "rating";
@@ -68,7 +55,7 @@ export default function RatingSort() {
               <StarIcon className="size-4 fill-star text-transparent" />
               <Icon />
             </div>
-            <span>{item.name}</span>
+            <span>{item.label}</span>
           </DropdownMenuRadioItem>
         );
       })}

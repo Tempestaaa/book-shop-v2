@@ -1,5 +1,9 @@
 import { FilterByPage, Menu } from "@/types/common";
 import {
+  CalendarArrowDownIcon,
+  CalendarArrowUpIcon,
+  ChevronsDownIcon,
+  ChevronsUpIcon,
   HeartIcon,
   LogsIcon,
   LucideIcon,
@@ -63,4 +67,30 @@ export const onlyFilterThese = [
   "format",
   "pages",
   "availability",
+];
+
+export const dateSort: { label: string; href: string; icon: LucideIcon }[] = [
+  {
+    label: "Latest",
+    href: "desc",
+    icon: CalendarArrowDownIcon,
+  },
+  {
+    label: "Oldest",
+    href: "asc",
+    icon: CalendarArrowUpIcon,
+  },
+];
+
+export const ratingSort: { label: string; href: string; icon: LucideIcon }[] = [
+  {
+    label: "High to Low",
+    href: "asc",
+    icon: ChevronsDownIcon,
+  },
+  {
+    label: "Low to High",
+    href: "desc",
+    icon: ChevronsUpIcon,
+  },
 ];

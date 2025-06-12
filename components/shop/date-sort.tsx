@@ -5,23 +5,9 @@ import {
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
 } from "@/components/ui/dropdown-menu";
+import { dateSort } from "@/data/common";
 import useSearchParamsActions from "@/hooks/useSearchParamsActions";
-import { OptionsWithIcon } from "@/types/common";
-import { CalendarArrowDownIcon, CalendarArrowUpIcon } from "lucide-react";
 import { useEffect, useState } from "react";
-
-const dateSort: OptionsWithIcon[] = [
-  {
-    name: "Latest",
-    href: "desc",
-    icon: CalendarArrowDownIcon,
-  },
-  {
-    name: "Oldest",
-    href: "asc",
-    icon: CalendarArrowUpIcon,
-  },
-];
 
 export default function DateSort() {
   const term = "release-date";
@@ -62,7 +48,7 @@ export default function DateSort() {
             className="flex-center gap-3"
           >
             <Icon />
-            <span>{item.name}</span>
+            <span>{item.label}</span>
           </DropdownMenuRadioItem>
         );
       })}
