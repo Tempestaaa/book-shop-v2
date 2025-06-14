@@ -1,10 +1,7 @@
 import MyBreadcrumb from "@/components/layout/my-breadcrumb";
 import GenreCard from "@/components/public/home/genre-card";
-import { Button } from "@/components/ui/button";
 import bookGenres from "@/data/genres";
-import { formatSearchParams } from "@/lib/utils";
 import { Options } from "@/types/common";
-import Link from "next/link";
 
 export default function GenresPage() {
   const breadcrumbs: Options[] = [

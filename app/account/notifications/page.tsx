@@ -1,8 +1,7 @@
 import NotificationCard from "@/components/layout/notification-card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import Pagination from "@/components/ui/pagination";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Suspense } from "react";
 
 export default function NotificationsPage() {
   return (
@@ -16,25 +15,27 @@ export default function NotificationsPage() {
           </TabsList>
         </section>
 
-        <section className="">
-          <TabsContent value="unseen" className="space-y-8">
-            <div className="*:p-4">
-              {[...Array(10)].map((_, id) => (
-                <NotificationCard key={id} />
-              ))}
-            </div>
-            <Pagination totalLength={Array(10).length} />
-          </TabsContent>
+        <Suspense fallback="Loading...">
+          <section className="">
+            <TabsContent value="unseen" className="space-y-8">
+              <div className="*:p-4">
+                {[...Array(10)].map((_, id) => (
+                  <NotificationCard key={id} />
+                ))}
+              </div>
+              <Pagination totalLength={Array(10).length} />
+            </TabsContent>
 
-          <TabsContent value="read" className="space-y-8">
-            <div className="*:p-4">
-              {[...Array(10)].map((_, id) => (
-                <NotificationCard key={id} isRead />
-              ))}
-            </div>
-            <Pagination totalLength={Array(10).length} />
-          </TabsContent>
-        </section>
+            <TabsContent value="read" className="space-y-8">
+              <div className="*:p-4">
+                {[...Array(10)].map((_, id) => (
+                  <NotificationCard key={id} isRead />
+                ))}
+              </div>
+              <Pagination totalLength={Array(10).length} />
+            </TabsContent>
+          </section>
+        </Suspense>
       </Tabs>
     </div>
   );
