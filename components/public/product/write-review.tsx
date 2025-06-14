@@ -1,6 +1,6 @@
 "use client";
 
-import InteractiveRating from "@/components/product/interactive-rating";
+import InteractiveRating from "@/components/public/product/interactive-rating";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -33,7 +33,7 @@ export default function WriteReview() {
       <DialogContent>
         <form>
           <DialogHeader>
-            <DialogTitle className="text-xl">Write a review</DialogTitle>
+            <DialogTitle className="text-heading">Write a review</DialogTitle>
           </DialogHeader>
 
           <div className="my-4 space-y-2">

@@ -1,5 +1,5 @@
-import DateSort from "@/components/shop/date-sort";
-import RatingSort from "@/components/shop/rating-sort";
+import DateSort from "@/components/public/shop/date-sort";
+import RatingSort from "@/components/public/shop/rating-sort";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,

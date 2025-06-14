@@ -1,10 +1,10 @@
-import ProductGrid from "@/components/product/product-grid";
-import FilterPills from "@/components/shop/filter-pills";
-import SortOptions from "@/components/shop/sort-options";
-import FilterSidebar from "@/components/shop/filter-sidebar";
 import Pagination from "@/components/ui/pagination";
 import MyBreadcrumb from "@/components/layout/my-breadcrumb";
 import { Options } from "@/types/common";
+import FilterSidebar from "@/components/public/shop/filter-sidebar";
+import FilterPills from "@/components/public/shop/filter-pills";
+import SortOptions from "@/components/public/shop/sort-options";
+import ProductGrid from "@/components/public/product/product-grid";
 
 type Props = {
   searchParams: Promise<{

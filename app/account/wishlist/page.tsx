@@ -1,5 +1,5 @@
-import ProductGrid from "@/components/product/product-grid";
-import SortOptions from "@/components/shop/sort-options";
+import ProductGrid from "@/components/public/product/product-grid";
+import SortOptions from "@/components/public/shop/sort-options";
 import { Input } from "@/components/ui/input";
 import Pagination from "@/components/ui/pagination";
 import { Suspense } from "react";

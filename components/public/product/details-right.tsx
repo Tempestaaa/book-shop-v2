@@ -21,7 +21,7 @@ export default function DetailsRight() {
   const [format, setFormat] = useState(bookFormat.options[0]);
 
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-4 shadow-xs shadow-foreground rounded-md p-4">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" className="w-full">

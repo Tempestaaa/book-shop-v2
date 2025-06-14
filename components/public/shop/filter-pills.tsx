@@ -1,4 +1,4 @@
-import FilterDeleteButton from "@/components/shop/filter-delete-button";
+import FilterDeleteButton from "@/components/public/shop/filter-delete-button";
 import { Badge } from "@/components/ui/badge";
 import { onlyFilterThese } from "@/data/common";
 import { reverseFormatSearchParams } from "@/lib/utils";

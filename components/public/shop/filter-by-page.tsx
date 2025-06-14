@@ -1,13 +1,13 @@
 "use client";
 
-import FilterWrapper from "@/components/shop/filter-wrapper";
+import FilterWrapper from "@/components/public/shop/filter-wrapper";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { pageRanges } from "@/data/common";
 import useSearchParamsActions from "@/hooks/useSearchParamsActions";
-import { bookFormat } from "@/types/book";
 
-export default function FilterByFormat() {
-  const term = "format";
+export default function FilterByPage() {
+  const term = "pages";
 
   const { isSearchParamsMatching, changePageURL } = useSearchParamsActions();
   const isChecked = (value: string) => isSearchParamsMatching(term, value);
@@ -15,18 +15,22 @@ export default function FilterByFormat() {
   return (
     <FilterWrapper term={term}>
       <RadioGroup>
-        {bookFormat.options.map((item) => (
+        {pageRanges.map(({ label, min, max }) => (
           <div
-            onClick={() => changePageURL(term, item)}
-            key={item}
+            onClick={() => changePageURL(term, min + "-" + max)}
+            key={min + max}
             className="flex items-center gap-4"
           >
-            <RadioGroupItem checked={isChecked(item)} value={item} id={item} />
+            <RadioGroupItem
+              checked={isChecked(`${min}-${max}`)}
+              value={label}
+              id={label}
+            />
             <Label
-              htmlFor={item}
+              htmlFor={label}
               className="cursor-pointer flex-1 text-sm font-normal"
             >
-              {item}
+              {label}
             </Label>
           </div>
         ))}

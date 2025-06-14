@@ -1,7 +1,6 @@
-import { bookGenre } from "@/types/book";
-import { z } from "zod/v4";
+import { Genre } from "@/types/book";
 
-const bookGenres: z.infer<typeof bookGenre>[] = [
+const bookGenres: Genre[] = [
   { id: "3f2e1d0c-b9a8-7654-3210-fedcba987654", name: "Fantasy" },
   { id: "2a1b0c9d-e8f7-6543-2109-87fedcba9876", name: "Science Fiction" },
   { id: "1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f", name: "Mystery" },

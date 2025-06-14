@@ -1,4 +1,4 @@
-import TotalItem from "@/components/cart/total-item";
+import TotalItem from "@/components/public/cart/total-item";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";

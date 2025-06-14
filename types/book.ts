@@ -7,6 +7,7 @@ export const bookGenre = z.object({
     .min(1, "Name cannot be empty")
     .max(255, "Character length limit exceeded"),
 });
+export type Genre = z.infer<typeof bookGenre>;
 
 export const bookFormat = z.enum([
   "Hardcover",

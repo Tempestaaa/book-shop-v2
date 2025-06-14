@@ -1,4 +1,4 @@
-import FilterDeleteButton from "@/components/shop/filter-delete-button";
+import FilterDeleteButton from "@/components/public/shop/filter-delete-button";
 
 type Props = {
   term: string;

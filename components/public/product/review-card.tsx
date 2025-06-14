@@ -1,4 +1,4 @@
-import StarRating from "@/components/product/star-rating";
+import StarRating from "@/components/public/product/star-rating";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {

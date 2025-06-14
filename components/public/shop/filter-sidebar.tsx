@@ -1,9 +1,9 @@
-import FilterByAvailability from "@/components/shop/filter-by-availability";
-import FilterByFormat from "@/components/shop/filter-by-format";
-import FilterByGenre from "@/components/shop/filter-by-genre";
-import FilterByPage from "@/components/shop/filter-by-page";
-import FilterByPrice from "@/components/shop/filter-by-price";
-import FilterClearAllButton from "@/components/shop/filter-clear-all-button";
+import FilterByAvailability from "@/components/public/shop/filter-by-availability";
+import FilterByFormat from "@/components/public/shop/filter-by-format";
+import FilterByGenre from "@/components/public/shop/filter-by-genre";
+import FilterByPage from "@/components/public/shop/filter-by-page";
+import FilterByPrice from "@/components/public/shop/filter-by-price";
+import FilterClearAllButton from "@/components/public/shop/filter-clear-all-button";
 import { Suspense } from "react";
 
 export default function FilterSidebar() {

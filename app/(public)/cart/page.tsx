@@ -1,7 +1,7 @@
-import PaymentPromo from "@/components/cart/payment-promo";
-import ProductList from "@/components/cart/product-list";
 import MyBreadcrumb from "@/components/layout/my-breadcrumb";
-import RelatedProducts from "@/components/product/related-products";
+import PaymentPromo from "@/components/public/cart/payment-promo";
+import ProductList from "@/components/public/cart/product-list";
+import RelatedProducts from "@/components/public/product/related-products";
 import { Options } from "@/types/common";
 
 export default function CartPage() {

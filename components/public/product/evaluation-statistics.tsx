@@ -1,6 +1,6 @@
 "use client";
 
-import StarRating from "@/components/product/star-rating";
+import StarRating from "@/components/public/product/star-rating";
 import useSearchParamsActions from "@/hooks/useSearchParamsActions";
 
 const rating = {
@@ -17,7 +17,7 @@ export default function EvaluationStatistics() {
 
   return (
     <div className="flex flex-col gap-3">
-      <section className="text-xl font-bold">Statistics</section>
+      <section className="text-heading">Statistics</section>
 
       <section className="flex items-center-safe gap-4 text-2xl">
         <StarRating rating={4.5} showScore />

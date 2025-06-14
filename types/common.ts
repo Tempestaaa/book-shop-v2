@@ -10,7 +10,7 @@ export type OptionsWithIcon = Options & {
 };
 
 export type Menu = Options & {
-  children?: Options;
+  children?: Options[];
 };
 
 export type FilterByPage = {

@@ -1,7 +1,7 @@
 "use client";
 
-import FilterDeleteButton from "@/components/shop/filter-delete-button";
-import FilterWrapper from "@/components/shop/filter-wrapper";
+import FilterDeleteButton from "@/components/public/shop/filter-delete-button";
+import FilterWrapper from "@/components/public/shop/filter-wrapper";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import useSearchParamsActions from "@/hooks/useSearchParamsActions";

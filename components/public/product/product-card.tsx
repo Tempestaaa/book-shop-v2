@@ -1,13 +1,21 @@
-import StarRating from "@/components/product/star-rating";
+import StarRating from "@/components/public/product/star-rating";
 import { Button } from "@/components/ui/button";
 import { formatPrice } from "@/lib/utils";
 import { ShoppingCartIcon } from "lucide-react";
 import Link from "next/link";
 
-export default function ProductCard() {
+type Props = {
+  size?: "default" | "lg";
+};
+
+export default function ProductCard({ size = "default" }: Props) {
   return (
     <div className="space-y-2 group">
-      <div className="max-w-60 h-80 mx-auto bg-muted rounded-md overflow-hidden relative">
+      <div
+        className={`${
+          size === "default" ? "max-w-60 h-80" : "max-w-72 h-100"
+        } mx-auto bg-muted rounded-md overflow-hidden relative`}
+      >
         <Link href={`/product/${123}`} className="block size-full">
           {/* <Image
             src="/images/product-card.jpg"
@@ -23,7 +31,9 @@ export default function ProductCard() {
         </Button>
       </div>
 
-      <div className="max-w-60 mx-auto">
+      <div
+        className={`${size === "default" ? "max-w-60" : "max-w-72"} mx-auto`}
+      >
         <Link href={`/product/${123}`} className="font-medium line-clamp-1">
           This is the book&apos;s title
         </Link>

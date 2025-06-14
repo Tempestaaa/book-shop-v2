@@ -1,5 +1,4 @@
-import ProductCard from "@/components/product/product-card";
-import React from "react";
+import ProductCard from "@/components/public/product/product-card";
 
 export default function ProductGrid() {
   return (

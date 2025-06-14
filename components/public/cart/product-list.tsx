@@ -1,4 +1,4 @@
-import CartCard from "@/components/cart/cart-card";
+import CartCard from "@/components/public/cart/cart-card";
 import {
   Table,
   TableBody,

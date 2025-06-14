@@ -1,6 +1,6 @@
 "use client";
 
-import FilterWrapper from "@/components/shop/filter-wrapper";
+import FilterWrapper from "@/components/public/shop/filter-wrapper";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import useSearchParamsActions from "@/hooks/useSearchParamsActions";

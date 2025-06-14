@@ -1,10 +1,10 @@
 import MyBreadcrumb from "@/components/layout/my-breadcrumb";
-import CommunityReviews from "@/components/product/community-reviews";
-import DetailsLeft from "@/components/product/details-left";
-import DetailsMiddle from "@/components/product/details-middle";
-import DetailsRight from "@/components/product/details-right";
-import EvaluationStatistics from "@/components/product/evaluation-statistics";
-import RelatedProducts from "@/components/product/related-products";
+import CommunityReviews from "@/components/public/product/community-reviews";
+import DetailsLeft from "@/components/public/product/details-left";
+import DetailsMiddle from "@/components/public/product/details-middle";
+import DetailsRight from "@/components/public/product/details-right";
+import EvaluationStatistics from "@/components/public/product/evaluation-statistics";
+import RelatedProducts from "@/components/public/product/related-products";
 import { Separator } from "@/components/ui/separator";
 import { reverseFormatSearchParams } from "@/lib/utils";
 import { Options } from "@/types/common";

@@ -1,5 +1,5 @@
-import InfoItem from "@/components/product/info-item";
-import StarRating from "@/components/product/star-rating";
+import InfoItem from "@/components/public/product/info-item";
+import StarRating from "@/components/public/product/star-rating";
 import { Badge } from "@/components/ui/badge";
 import bookGenres from "@/data/genres";
 import { formatDate, formatSearchParams } from "@/lib/utils";
@@ -8,9 +8,11 @@ import Link from "next/link";
 export default function DetailsMiddle() {
   return (
     <section className="flex flex-col gap-3">
-      <section className="space-y-2">
-        <h1 className="text-4xl font-bold">This is the book&apos;s title</h1>
-        <div>by Author name</div>
+      <section className="space-y-1">
+        <h1 className="text-3xl font-semibold">
+          This is the book&apos;s title
+        </h1>
+        <div className="text-muted-foreground">by Author name</div>
       </section>
 
       <section className="flex items-center-safe gap-4">
@@ -63,7 +65,7 @@ export default function DetailsMiddle() {
       </section>
 
       <section className="mt-4 space-y-3">
-        <header className="font-bold text-xl">This edition</header>
+        <header className="text-subheading">This edition</header>
         <div className="space-y-1.5">
           <InfoItem label="Format" value="300 pages, Paperback edition" />
           <InfoItem label="Language" value="English" />

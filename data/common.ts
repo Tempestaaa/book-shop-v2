@@ -1,5 +1,6 @@
 import { FilterByPage, Menu } from "@/types/common";
 import {
+  BellIcon,
   CalendarArrowDownIcon,
   CalendarArrowUpIcon,
   ChevronsDownIcon,
@@ -40,6 +41,11 @@ export const navbarUserMenu: {
     label: "My orders",
     icon: LogsIcon,
     href: "/account/orders",
+  },
+  {
+    label: "Notifications",
+    icon: BellIcon,
+    href: "/account/notifications",
   },
   {
     label: "Wishlist",
@@ -93,4 +99,36 @@ export const ratingSort: { label: string; href: string; icon: LucideIcon }[] = [
     href: "desc",
     icon: ChevronsUpIcon,
   },
+];
+
+export const footerMenu = [
+  {
+    label: "Policies & Support",
+    children: [
+      "Return & exchange policy",
+      "Shipping policy",
+      "Payment guide",
+      "FAQ",
+      "Customer support",
+    ],
+  },
+  {
+    label: "Legal Information",
+    children: [
+      "Business license",
+      "Privacy policy",
+      "Terms of service",
+      "Copyright",
+    ],
+  },
+  {
+    label: "Site map",
+    children: ["Home", "Shop", "Genres", "About"],
+  },
+];
+
+export const socialIcons = [
+  "/icons/facebook.svg",
+  "/icons/instagram.svg",
+  "/icons/x.svg",
 ];

@@ -1,12 +1,12 @@
 "use client";
 
-import ProductCard from "@/components/product/product-card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import ProductCard from "@/components/public/product/product-card";
 
 export default function RelatedProducts() {
   return (

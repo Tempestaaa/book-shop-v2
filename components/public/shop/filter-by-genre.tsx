@@ -1,6 +1,6 @@
 "use client";
 
-import FilterWrapper from "@/components/shop/filter-wrapper";
+import FilterWrapper from "@/components/public/shop/filter-wrapper";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
