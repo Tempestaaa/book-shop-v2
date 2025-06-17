@@ -73,6 +73,7 @@ export const onlyFilterThese = [
   "format",
   "pages",
   "availability",
+  "search",
 ];
 
 export const dateSort: { label: string; href: string; icon: LucideIcon }[] = [

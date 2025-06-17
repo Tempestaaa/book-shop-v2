@@ -7,7 +7,7 @@ export default function AccountLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 min-h-[calc(100dvh-10rem)]">
       <AccountBreadcrumb />
 
       <div className="grid grid-cols-12 gap-8">

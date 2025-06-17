@@ -38,7 +38,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <div className="container mx-auto py-20">{children}</div>
+          <div className="container mx-auto py-20 min-h-[calc(100dvh-10rem)]">
+            {children}
+          </div>
           <Footer />
 
           <Toaster />

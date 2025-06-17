@@ -16,7 +16,7 @@ export default function AuthCard({
 }: Props) {
   return (
     <article
-      className={`w-5xl h-140 rounded-md shadow-md flex overflow-hidden border-2 border-muted p-8 ${
+      className={`w-5xl min-h-140 rounded-md shadow-md flex overflow-hidden border-2 border-muted p-8 ${
         isReversed && "flex-row-reverse"
       }`}
     >

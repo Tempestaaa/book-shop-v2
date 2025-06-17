@@ -1,41 +1,88 @@
+"use client";
+
 import SocialButtons from "@/components/auth/social-buttons";
 import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Login, loginSchema } from "@/types/user";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function LoginForm() {
+  const form = useForm<Login>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
+
+  const onSubmit = (values: Login) => {
+    console.log(values);
+  };
+
   return (
-    <form className="flex flex-col gap-3 h-full">
-      <Label className="flex flex-col gap-2 items-start">
-        <span className="font-medium">Username</span>
-        <Input placeholder="Enter username" />
-      </Label>
-
-      <Label className="flex flex-col gap-2 items-start">
-        <span className="font-medium">Password</span>
-        <Input type="password" placeholder="******" />
-      </Label>
-
-      <Link
-        href="/forget-password"
-        className="ml-auto mb-2 text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground duration-300"
+    <Form {...form}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col gap-3 h-full"
       >
-        Forget your password?
-      </Link>
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input placeholder="Enter your email" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-      <Button type="submit" className="mt-1">
-        Login
-      </Button>
+        <FormField
+          control={form.control}
+          name="password"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Password</FormLabel>
+              <FormControl>
+                <Input placeholder="******" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-      <SocialButtons />
+        <Link
+          href="/forget-password"
+          className="ml-auto mb-2 text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground duration-300"
+        >
+          Forget your password?
+        </Link>
 
-      <div className="mt-auto text-center text-xs text-muted-foreground">
-        Don&apos;t have an account?
-        <span className="font-medium text-foreground hover:underline underline-offset-2 ml-1">
-          <Link href="/register">Create one</Link>
-        </span>
-      </div>
-    </form>
+        <Button type="submit" className="mt-1">
+          Login
+        </Button>
+
+        <SocialButtons />
+
+        <div className="mt-auto text-center text-xs text-muted-foreground">
+          Don&apos;t have an account?
+          <span className="font-medium text-foreground hover:underline underline-offset-2 ml-1">
+            <Link href="/register">Create one</Link>
+          </span>
+        </div>
+      </form>
+    </Form>
   );
 }
