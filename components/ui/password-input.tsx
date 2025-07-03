@@ -11,7 +11,7 @@ const PasswordInput = ({
   const [isShowPass, setIsShowPass] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <input
         type={isShowPass ? "text" : "password"}
         data-slot="input"
