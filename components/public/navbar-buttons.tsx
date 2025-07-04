@@ -1,3 +1,4 @@
+import NotificationButton from "@/components/public/notification-button";
 import SearchDialog from "@/components/public/search-dialog";
 import { Button } from "@/components/ui/button";
 import {
@@ -6,7 +7,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { BellIcon, ShoppingCartIcon } from "lucide-react";
+import { ShoppingCartIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function NavbarButtons() {
@@ -14,16 +15,7 @@ export default function NavbarButtons() {
     <div className="flex-center gap-2">
       <SearchDialog />
 
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button variant="ghost" size="icon">
-              <BellIcon />
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent>Notification</TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+      <NotificationButton />
 
       <TooltipProvider>
         <Tooltip>

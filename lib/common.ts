@@ -49,16 +49,7 @@ export const userNavbarMenu: Item[] = [
   },
   {
     label: "Notifications",
-    children: [
-      {
-        label: "Order",
-        href: "/user/notification/order",
-      },
-      {
-        label: "Promotion",
-        href: "/user/notification/promotion",
-      },
-    ],
+    href: "/user/notification",
   },
   {
     label: "Purchase",
