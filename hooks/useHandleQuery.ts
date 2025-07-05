@@ -22,8 +22,11 @@ export default function useHandleQuery() {
   const changeURL = (term: string, value: string) =>
     push(createURL(term, value));
 
-  const changeURLSearch = (term: string, value: string) =>
-    push("/shop" + createURL(term, value));
+  const changeURLSearch = (term: string, value: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set(slugify(term), slugify(value));
+    push(`/search?${params.toString()}`);
+  };
 
   const deleteURL = (term: string) => {
     const params = new URLSearchParams(searchParams.toString());

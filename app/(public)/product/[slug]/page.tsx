@@ -7,7 +7,7 @@ import EvaluationStatistics from "@/components/public/product/evaluation-statist
 import RelatedProducts from "@/components/public/product/related-products";
 import { Separator } from "@/components/ui/separator";
 import { unslugify } from "@/lib/utils";
-import { Item } from "@/types/common";
+import { BreadCrumb } from "@/types/common";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -15,7 +15,7 @@ type Props = {
 
 export default async function ProductDetailsPage({ params }: Props) {
   const { slug } = await params;
-  const breadcrumbs: Item[] = [
+  const breadcrumbs: BreadCrumb[] = [
     { label: "Home", href: "/" },
     { label: "Shop", href: "/shop" },
     { label: "Fantasy", href: "/shop?genre=fantasy" },

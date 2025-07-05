@@ -10,13 +10,13 @@ export default function UserLayout({
     <>
       <Navbar />
 
-      <main className="py-16 grid grid-cols-12 gap-8">
+      <div className="py-16 grid grid-cols-12 gap-8">
         <aside className="col-span-3">
           <Sidebar />
         </aside>
 
         <div className="col-span-9">{children}</div>
-      </main>
+      </div>
     </>
   );
 }

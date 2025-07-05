@@ -1,13 +1,14 @@
-import { FilterByPage, Item } from "@/types/common";
+import bookGenres from "@/mock-data/genres";
+import { FilterByPage, Item, NavbarMenu } from "@/types/common";
 
-export const navbarMenu: Item[] = [
+export const navbarMenu: NavbarMenu[] = [
   {
     label: "Shop",
     href: "/shop",
   },
   {
     label: "Genres",
-    children: [],
+    children: bookGenres,
   },
   {
     label: "About",
