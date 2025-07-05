@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { slugify } from "@/lib/utils";
 import bookGenres from "@/mock-data/genres";
 import Link from "next/link";
 
@@ -10,7 +11,7 @@ export default function SearchRelated() {
         {bookGenres.map((item) => (
           <Link
             key={item.id}
-            href={`/shop?genre=${item.name}`}
+            href={`/shop?genre=${slugify(item.name)}`}
             className="block text-sm text-muted-foreground hover:text-foreground duration-300 space-x-1"
           >
             <span>{item.name}</span>

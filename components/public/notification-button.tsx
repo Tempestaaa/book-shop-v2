@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { BellIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function NotificationButton() {
   return (
@@ -33,7 +34,9 @@ export default function NotificationButton() {
             <ScrollBar />
           </ScrollArea>
 
-          <Button variant="ghost">More</Button>
+          <Button variant="ghost" asChild>
+            <Link href="/user/notification">More</Link>
+          </Button>
         </section>
       </DropdownMenuContent>
     </DropdownMenu>

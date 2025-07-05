@@ -26,7 +26,7 @@ export default function NavbarMenu() {
                 )}
               </Link>
 
-              <ul className="absolute top-full left-0 z-50 bg-background hidden group-hover:grid grid-cols-4 gap-2 min-w-xl p-4 rounded-md shadow-xs shadow-foreground">
+              <ul className="absolute top-full left-0 z-50 bg-background hidden group-hover:grid grid-cols-4 gap-2 min-w-xl p-2 rounded-md shadow-xs shadow-foreground">
                 {bookGenres.map((item) => (
                   <Button
                     key={item.id}
