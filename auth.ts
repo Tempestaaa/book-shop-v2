@@ -58,7 +58,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       const role = auth?.user.role;
 
       const isAuthRoute = pathname.startsWith("/auth");
-      const isAccountRoute = pathname.startsWith("/account");
+      const isAccountRoute = pathname.startsWith("/user");
 
       if (isLoggedIn && isAuthRoute) {
         return NextResponse.redirect(new URL("/", req.nextUrl.origin));
