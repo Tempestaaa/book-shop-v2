@@ -1,7 +1,30 @@
-import { auth } from "@/auth";
+import Hero from "@/components/public/home/hero";
+import NewsLetter from "@/components/public/home/news-letter";
+import ProductDisplay from "@/components/public/home/product-display";
+import ValueProposition from "@/components/public/home/value-proposition";
 
-export default async function HomePage() {
-  const session = await auth();
+export default function Home() {
+  return (
+    <div className="flex flex-col">
+      <main className="flex-grow">
+        <Hero />
+        <ValueProposition />
 
-  return <div>{JSON.stringify(session, null, 2)}</div>;
+        <ProductDisplay
+          label="New Arrivals"
+          href="/shop"
+          buttonLabel="View all"
+          lightMode
+        />
+
+        <ProductDisplay
+          label="Bestsellers"
+          href="/shop"
+          buttonLabel="View all"
+        />
+
+        <NewsLetter />
+      </main>
+    </div>
+  );
 }

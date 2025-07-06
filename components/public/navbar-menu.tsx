@@ -12,35 +12,24 @@ export default function NavbarMenu() {
   return (
     <menu className="flex-center">
       {navbarMenu.map((item, id) => (
-        <li key={id}>
-          {item.href ? (
-            <Link href={item.href} className={menuItemClassName}>
-              {item.label}
-            </Link>
-          ) : (
-            <div className="relative group">
-              <Link href={`/genres`} className={menuItemClassName}>
-                <p>{item.label}</p>
-                {item.children && (
-                  <ChevronDownIcon className="size-4 group-hover:rotate-180 duration-300" />
-                )}
-              </Link>
+        <li key={id} className="relative group">
+          <Link href={item.href!} className={menuItemClassName}>
+            <p>{item.label}</p>
+            {item.children && (
+              <ChevronDownIcon className="size-4 group-hover:rotate-180 duration-300" />
+            )}
+          </Link>
 
-              <ul className="absolute top-full left-0 z-50 bg-background hidden group-hover:grid grid-cols-4 gap-2 min-w-xl p-2 rounded-md shadow-xs shadow-foreground">
-                {bookGenres.map((item) => (
-                  <Button
-                    key={item.id}
-                    variant="ghost"
-                    asChild
-                    className="!px-8"
-                  >
-                    <Link href={`/shop?genre=${slugify(item.name)}`}>
-                      {item.name}
-                    </Link>
-                  </Button>
-                ))}
-              </ul>
-            </div>
+          {item.children && (
+            <ul className="absolute top-full left-0 z-50 bg-background hidden group-hover:grid grid-cols-4 gap-2 min-w-xl p-2 rounded-md shadow-xs shadow-foreground">
+              {bookGenres.map((item) => (
+                <Button key={item.id} variant="ghost" asChild className="!px-8">
+                  <Link href={`/shop?genre=${slugify(item.name)}`}>
+                    {item.name}
+                  </Link>
+                </Button>
+              ))}
+            </ul>
           )}
         </li>
       ))}

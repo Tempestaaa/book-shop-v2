@@ -141,7 +141,7 @@
     @apply grid place-items-center-safe;
   }
   .text-heading {
-    @apply font-semibold text-2xl;
+    @apply font-semibold text-3xl;
   }
   .text-subheading {
     @apply font-semibold text-xl;

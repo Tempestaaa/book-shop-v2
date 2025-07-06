@@ -1,5 +1,11 @@
 import bookGenres from "@/mock-data/genres";
-import { FilterByPage, Item, NavbarMenu } from "@/types/common";
+import {
+  FilterByPage,
+  Item,
+  NavbarMenu,
+  ValueProposition,
+} from "@/types/common";
+import { HeartPlusIcon, ListFilterPlusIcon, TruckIcon } from "lucide-react";
 
 export const navbarMenu: NavbarMenu[] = [
   {
@@ -8,6 +14,7 @@ export const navbarMenu: NavbarMenu[] = [
   },
   {
     label: "Genres",
+    href: "/genres",
     children: bookGenres,
   },
   {
@@ -59,5 +66,23 @@ export const userNavbarMenu: Item[] = [
   {
     label: "Settings",
     href: "/user/settings",
+  },
+];
+
+export const valueProposition: ValueProposition[] = [
+  {
+    icon: TruckIcon,
+    label: "Free Shipping",
+    content: "On orders over 20$ across Vietnam.",
+  },
+  {
+    icon: HeartPlusIcon,
+    label: "24/7 Support",
+    content: "Dedicated customer service to assist you.",
+  },
+  {
+    icon: ListFilterPlusIcon,
+    label: "Curated Selection",
+    content: "Hand-picked books for a delightful reading experience.",
   },
 ];

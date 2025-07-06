@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { SessionProvider } from "next-auth/react";
+import Footer from "@/components/public/footer";
 
 const defaultFont = Montserrat({
   subsets: ["latin"],
@@ -31,9 +32,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SessionProvider>
-            <main className="max-w-[1440px] mx-auto overflow-hidden px-4">
+            <main className="max-w-[1440px] min-h-dvh mx-auto overflow-hidden px-4">
               {children}
             </main>
+
+            <Footer />
 
             <Toaster richColors />
           </SessionProvider>

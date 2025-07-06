@@ -1,4 +1,5 @@
 import { bookGenre } from "@/types/product";
+import { LucideIcon } from "lucide-react";
 import { z } from "zod/v4";
 
 export type Item = {
@@ -21,4 +22,9 @@ export type FilterByPage = {
 export type BreadCrumb = {
   label: string;
   href?: string;
+};
+
+export type ValueProposition = Pick<Item, "label"> & {
+  icon: LucideIcon;
+  content: string;
 };
