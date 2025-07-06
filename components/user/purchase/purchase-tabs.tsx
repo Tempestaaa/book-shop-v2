@@ -33,7 +33,7 @@ export default function PurchaseTabs() {
     const updatedItem = statusArr.find(
       (item) => item.value.toString() === updatedStatus
     );
-    updatedStatus !== status?.value.toString() && setStatus(updatedItem);
+    if (updatedStatus !== status?.value.toString()) setStatus(updatedItem);
   }, [getInitialQuery, status]);
 
   const handleSwitchTab = useCallback(

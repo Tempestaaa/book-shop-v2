@@ -14,7 +14,7 @@ export default function NotificationTabs() {
 
   useEffect(() => {
     const updatedStatus = getInitialQuery(term, statusArr[0]);
-    updatedStatus !== status && setStatus(updatedStatus);
+    if (updatedStatus !== status) setStatus(updatedStatus);
   }, [getInitialQuery, status]);
 
   const handleSwitchTab = useCallback(
