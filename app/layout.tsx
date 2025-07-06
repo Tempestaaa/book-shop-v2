@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { SessionProvider } from "next-auth/react";
 import Footer from "@/components/public/footer";
+import { Suspense } from "react";
 
 const defaultFont = Montserrat({
   subsets: ["latin"],
@@ -32,9 +33,17 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SessionProvider>
-            <main className="max-w-[1440px] min-h-dvh mx-auto overflow-hidden px-4">
-              {children}
-            </main>
+            <Suspense
+              fallback={
+                <div className="min-h-dvh grid-center text-8xl text-red-600 font-bold">
+                  Loading...
+                </div>
+              }
+            >
+              <main className="max-w-[1440px] min-h-dvh mx-auto overflow-hidden px-4">
+                {children}
+              </main>
+            </Suspense>
 
             <Footer />
 
