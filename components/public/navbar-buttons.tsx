@@ -1,3 +1,4 @@
+import { auth } from "@/auth";
 import NotificationButton from "@/components/public/notification-button";
 import SearchDialog from "@/components/public/search-dialog";
 import { Button } from "@/components/ui/button";
@@ -10,12 +11,14 @@ import {
 import { ShoppingCartIcon } from "lucide-react";
 import Link from "next/link";
 
-export default function NavbarButtons() {
+export default async function NavbarButtons() {
+  const session = await auth();
+
   return (
     <div className="flex-center gap-2">
       <SearchDialog />
 
-      <NotificationButton />
+      {session?.user && <NotificationButton />}
 
       <TooltipProvider>
         <Tooltip>

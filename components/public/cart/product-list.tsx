@@ -13,6 +13,7 @@ export default function ProductList() {
     <article className="space-y-8">
       <header className="space-y-1">
         <div className="text-heading">Shopping cart</div>
+        {/* Todo: Number of items in the cart */}
         <div className="text-sm text-muted-foreground">
           There is currently 1 item in your cart.
         </div>

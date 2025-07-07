@@ -1,3 +1,4 @@
+import { api } from "@/lib/api";
 import { iUser } from "@/types/next-auth";
 import { userLogin } from "@/types/user";
 import NextAuth, { AuthError } from "next-auth";
@@ -16,21 +17,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           const validatedFields = await userLogin.safeParseAsync(credentials);
           if (!validatedFields.success) return null;
 
-          const res = await fetch(`${process.env.BACKEND_URL}/auth/login`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(validatedFields.data),
-          });
+          const res = await api.post(
+            `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/login`,
+            validatedFields.data
+          );
 
-          const data = await res.json();
-
-          if (data.statusCode !== 201) return null;
-
-          if (res.ok && data) {
-            return data.data;
-          }
-
-          return null;
+          if (res.success) return res.data;
+          else return null;
         } catch (error: any) {
           if (error instanceof AuthError) {
             throw error;
